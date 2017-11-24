@@ -3,3 +3,14 @@ npm  install -g cordova ionic
 创建项目  ionic start my App  tabs
 
 cd到目录  ionic serve
+
+创建组件  ionic g component  userInfo
+
+引入 BrowserModule  解决 ngFor 报错问题
+
+循环  ion-list
+
+
+
+
+吧 inoic crodova好好看一下
