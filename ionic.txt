@@ -1,0 +1,5 @@
+npm  install -g cordova ionic
+
+创建项目  ionic start my App  tabs
+
+cd到目录  ionic serve
