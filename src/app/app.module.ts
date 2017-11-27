@@ -12,6 +12,10 @@ import { NewsPage } from '../pages/news/news';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// http
+import { Http,HttpModule } from '@angular/http'
+// 服务
+import { DemoService } from './services/demo.service'
 // 引入模块
 import { ComponentsModule } from '../components/components.module';
 @NgModule({
@@ -25,6 +29,7 @@ import { ComponentsModule } from '../components/components.module';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     ComponentsModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -41,6 +46,7 @@ import { ComponentsModule } from '../components/components.module';
   providers: [
     StatusBar,
     SplashScreen,
+    DemoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

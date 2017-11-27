@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ActionSheetController } from 'ionic-angular';
 
 import { NewsPage } from '../news/news'
 @Component({
@@ -8,10 +9,38 @@ import { NewsPage } from '../news/news'
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public actionSheetCtrl: ActionSheetController) {
 
   }
   go(){
-    this.navCtrl.push(NewsPage)
+    this.navCtrl.push(NewsPage,{
+      'id':1
+    })
   }
+  presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+        title: 'Modify your album',
+        buttons: [
+            {
+                text: 'Destructive',
+                role: 'destructive',
+                handler: () => {
+                console.log('Destructive clicked');
+                }
+            },{
+                 text: 'Archive',
+                 handler: () => {
+                     console.log('Archive clicked');
+                 }
+             },{
+                 text: 'Cancel',
+                 role: 'cancel',
+                 handler: () => {
+                     console.log('Cancel clicked');
+                 }
+             }
+         ]
+     });
+     actionSheet.present();
+}
 }

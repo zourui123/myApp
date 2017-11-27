@@ -7,6 +7,21 @@
 </ion-header>
   
 <ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12>1</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>1</ion-col>
+          <ion-col col-6>2</ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
   <user-info></user-info>
+  <ion-icon name="add-circle" style="color:green"></ion-icon>
+
   <button ion-button (click)="go()">test</button>
+  <button ion-button (click)="presentActionSheet()">设备底部屏幕滑出</button>
 </ion-content>

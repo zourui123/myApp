@@ -12,5 +12,13 @@ cd到目录  ionic serve
 
 
 
+// http
+import { Http,HttpModule } from '@angular/http'
 
-吧 inoic crodova好好看一下
+import 中 引入  HttpModule 
+
+ //向后台post数据的写法如下
+        // let data = new URLSearchParams();
+        // data.append('email', user.email);
+        // data.append('password', user.password);
+        // return this.http.post(this.userRegisterURL,data);
